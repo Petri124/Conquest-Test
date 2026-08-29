@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <script src="scripts.js" defer></script>
+    </head>
+    <body>
+        <div class="show_display" id="overlay" onclick="ps_display('none')">
+            <img class="show_display" id="content" style="border: none;">
+        </div>
+
+         <header>
+            <div id="titlebox">
+                <div class="image" id="logo"></div>
+                <p style="padding:5px;">conquest theatre</p>
+            </div>
+        <nav>
+            <li id="nav_button" onclick="document.location='index.html'">home</li>
+            <li id="nav_button" onclick="document.location='about.html'">about</li>
+            <li id="nav_button" onclick="document.location='prevshows.html'">photos</li>
+            <li id="nav_button" onclick="document.location='volunteer.html'">get involved</li>
+            <li id="nav_button" onclick="document.location='contact.html'">contact</li>
+        </nav>
+        </header>
+        <main>
+            <section style="height:5%"></section>
+            <ul class="photogrid">
+                <li>
+                    <img src="pictures/poster1.jpg" onclick="ps_display('flex','pictures/poster1.jpg')">
+                </li>
+                <li>
+                    <img src="pictures/poster2.jpg" onclick="ps_display('flex','pictures/poster2.jpg')">
+                </li>
+                <li>
+                    <img src="pictures/poster3.png" onclick="ps_display('flex','pictures/poster3.png')">
+                </li>
+                <li>
+                    <img src="pictures/MTT_1359.jpg" onclick="ps_display('flex','pictures/MTT_1359.jpg')">
+                </li>
+                <li>
+                    <img src="pictures/360_F_254377074_lsDHDGuNjsd7K5WVj5NfIU6yYxKdKalw.jpg" onclick="ps_display('flex','pictures/360_F_254377074_lsDHDGuNjsd7K5WVj5NfIU6yYxKdKalw.jpg')">
+                </li>
+                  <li>
+                    <img src="pictures/poster1.jpg" onclick="ps_display('flex','pictures/poster1.jpg')">
+                </li>
+                <li>
+                    <img src="pictures/poster3.png" onclick="ps_display('flex','pictures/poster3.png')">
+                </li>
+            </ul>
+            <!--
+            <div class="poster_container">
+                <div class="card_wrapper" onclick="ps_display('flex','pictures/poster1.jpg')">
+                    <div class="style_wrapper">
+                        <img src="pictures/poster1.jpg" class="prevshow_poster" >
+                        <div class="card_textbox">
+                            <p style="text-align: center;">Prevshow 1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="prevshow_poster" style="background-image: url(pictures/poster1.jpg)" onclick="ps_display('block', 'ps_1.html')"></div>
+            </div>
+            <footer></footer>
+            -->
+              <footer style="display:flex; flex-direction: column; justify-content: center;">
+                <div style="display:flex; flex-direction: row; justify-content: center;">
+                    <ul>address</ul>
+                    <ul>phone</ul>
+                    <ul>email</ul>
+                </div>
+            </footer>
+        </main>
+    </body>
+</html>

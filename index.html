@@ -1,85 +1,67 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" href="flashlight.css">
-    <link rel="stylesheet" href="ectoplasm.css">
-    <script type="text/javascript" src="rooms.js"></script>
-    <script type="text/javascript" src="flashlight.js"></script>
-    <script type="text/javascript" src="monster.js"></script>
-    <script type="text/javascript" src="sanity.js"></script>
-    <script type="text/javascript" src="ectoplasm.js"></script>
-</head>
-<body onload="RandomRoomGen()">
-
-<div class="room">
-    <!--basic-->
-    <div id="fade_fx"></div>
-    <img id="light">
-    <img id="dark">
-<div id="hitbox">
-    <script>
-        MouseoverRepeater(hitbox_confirm);
-    </script>
-
-</div>
-  <!--minigame
-<div id="inspect">
-    <button id="inspectbutton" onclick="inspect()">inspect</button>
-    <p id="Timer">10</p>
-    <button id="ectoplasm" onclick="EctoGen()">0</button>
-</div>-->
-  <!--nav section-->
-</div>
-<div class="navboard">
- <!--
-    <div class="info"> 
-        <p id="display" >location here</p>
-        <p id="namedisplay">images displayed:</p>
-        <p id="safeornah">safe:</p>
-        <p id="clickdisplay">click display: </p>
-        <p id="hb">hitbox coordnates: </p>
-        <p id="hbconfirm">confirmation: </p>
-    </div>
---> 
-<!--navigation-->
-    <div class="nav">
-    <button onclick="lightswitch()">Use Flashlight</button>
-    <button onclick="inspect()">Inspect</button>
-    <button onclick="RandomRoomGen()">Next Room>></button>
-    <!--<button onclick="generate('attic', 4)">attic</button>
-    <button onclick="generate('bedroom', 8)">bedroom</button>
-    <button onclick="generate('livingroom',0)">livingroom</button>
-    <button onclick="generate('kitchen', 12)">kitchen</button>
-    <button onclick="generate('fronthall', 16)">fronthall</button>
-    <button onclick="generate('basement',20)">basement</button>-->
-    </div>
-<!--moniter bar-->
-<div class="moniter">
-<!--battery tracker-->
-        <table id="moniter_name">
-            <tr>
-                <td id="name_cell">battery power: </td>
-                <td id="flashlight percent">100%</td>
-            </tr>
-        </table>
-        <canvas id="battery" width="50px" height="1px"></canvas>   <script>drawbar(cap, 'battery');</script>
-<!--sanity tracker-->
-        <table id="moniter_name">
-            <tr>
-                <td id="name_cell">sanity: </td>
-                <td id="sanity percent">100%</td>
-            </tr>
-        </table>
-    <canvas id="sanity" width="50px" height="1px"></canvas>   <script>drawbar(sanity_cap, 'sanity');</script>
-  <!--ecplasm tracker-->
-        <table id="moniter_name">
-    <tr>
-        <td id="name_cell">ectoplasm: </td>
-        <td id="ectometer percent">0%</td>
-    </tr> 
-        </table>
-    <canvas id="ectometer" width="50px" height="1px"></canvas>  
-</div>
-</div>
-</body>
-</html>
+  <html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <script src="scripts.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <div id="titlebox">
+                <div class="image" id="logo"></div>
+                <p style="padding:5px;">conquest theatre</p>
+            </div>
+            <nav>
+                <li id="nav_button" onclick="document.location='index.html'">home</li>
+                <li id="nav_button" onclick="document.location='about.html'">about</li>
+                <li id="nav_button" onclick="document.location='prevshows.html'">photos</li>
+                <li id="nav_button" onclick="document.location='volunteer.html'">get involved</li>
+                <li id="nav_button" onclick="document.location='contact.html'">contact</li>
+            </nav>
+        </header>
+        <main>
+            <section class="hp_featured">
+                <div class="hpf_infopanel">
+                    <div class="hpf_info">
+                        <h1 style="font-size: 90px; align-self: center;">No shows at the moment</h1>
+                        <div class="button_container">
+                            <button onclick="document.location='prevshows.html'">Be a part of future shows</button>
+                            <button onclick="document.location='volunteer.html'">see previous shows</button> 
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="hp_about">
+                <p style="font-size:70px; text-align: center; margin-top: 0px; margin-bottom: 15px;">About us</p>
+                <div class="hpa_info">
+                    <div class="hpa_info_photo"></div>
+                    <div class="hpa_info_textbox">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan elit metus, vel suscipit massa porttitor eget. Sed eget viverra libero. Nulla molestie mi eu faucibus elementum. Aliquam faucibus odio mauris. Ut commodo lorem diam, sit amet ornare diam lacinia sit amet. Pellentesque consectetur enim vel velit lacinia congue. Suspendisse potenti. Proin fermentum posuere enim, eget elementum ante convallis sit amet. Quisque a tincidunt justo. Phasellus porta et purus quis facilisis. Vivamus vitae augue et dolor porta cursus. Pellentesque bibendum dui non velit pretium pellentesque. Vivamus at dignissim lectus.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan elit metus, vel suscipit massa porttitor eget. Sed eget viverra libero. Nulla molestie mi eu faucibus elementum. Aliquam faucibus odio mauris. Ut commodo lorem diam, sit amet ornare diam lacinia sit amet. Pellentesque consectetur enim vel velit lacinia congue. Suspendisse potenti. Proin fermentum posuere enim, eget elementum ante convallis sit amet. Quisque a tincidunt justo. Phasellus porta et purus quis facilisis. Vivamus vitae augue et dolor porta cursus. Pellentesque bibendum dui non velit pretium pellentesque. Vivamus at dignissim lectus.
+                        </p>
+                        <button style="align-self: flex-end;" onclick="document.location='about.html'">read more</button>
+                    </div>
+                </div>
+            </section>
+            <section class="hp_getinvolved">
+                <div class="volunteer_wrapper">
+                    <div class="application_form">
+                        <h1 style="text-align:center; font-size:60px; margin:40px;">Volunteer at Conquest Theatre</h1>
+                        <div class="button_container">
+                            <button>volunteer as a performer</button>
+                            <button>volunteer as a board member</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer style="display:flex; flex-direction: column; justify-content: center;">
+                <div style="display:flex; flex-direction: row; justify-content: center;">
+                    <ul>address</ul>
+                    <ul>phone</ul>
+                    <ul>email</ul>
+                </div>
+            </footer>
+        </main>
+    </body>
+  </html>

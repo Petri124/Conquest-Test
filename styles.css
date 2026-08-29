@@ -1,0 +1,414 @@
+/*basic css*/
+:root{
+    --ccbody: var(--ccds);
+    --ccbl: #050D10;
+    --ccheader: var(--ccds);
+    --cchtext: var(--ccb);
+    --cchbutton_text: var(--ccr);
+    --ccbutton_hover: var(--ccdds);
+    --cctext_hover: var(--ccdr);
+    --ccfooter:var(--ccds);
+
+    --ccb: #050D10;
+    --ccp: #2E2836;
+    --ccr: #6A2E35;
+    --ccds: #BE8A60;
+    --ccs: #E1AA7D;
+    --ccw: #fffaeb;
+
+    --ccdds: #a3744e;
+    --ccdr:#5c2128;
+    --ccbr:rgb(107, 26, 36);
+}
+/*
+:root{
+    --ccbody: #6A2E35;
+    --ccbl: #050D10;
+    --ccheader: #6A2E35;
+    --cchbutton_text: var(--ccs);
+    --cchtext: var(--ccs);
+    --ccbutton_hover: #5c2128;
+    --cctext_hover: #E1AA7D;
+
+    --ccb: #050D10;
+    --ccp: #2E2836;
+    --ccr: #6A2E35;
+    --ccds: #BE8A60;
+    --ccs: #E1AA7D;
+    --ccw: #fffaeb;
+
+    --ccdds: #a3744e;
+    --ccdr:#5c2128;
+}*/
+/*
+:root{
+    --ccbody: #2E2836;
+    --ccheader: #2E2836;
+    --ccbl: #050D10;
+    --cchbutton_text: var(--ccw);
+    --cchtext: var(--ccw);
+    --ccbutton_hover: #050D10;
+    --cctext_hover: #fffaeb;
+
+    --ccb: #050D10;
+    --ccp: #2E2836;
+    --ccr: #6A2E35;
+    --ccds: #BE8A60;
+    --ccs: #E1AA7D;
+    --ccw: #fffaeb;
+    --ccbr: #af2636;
+}*/
+
+body{
+    background-color: var(--ccbody);
+    width:100%;
+    height:100%;
+    margin:0px;
+}
+main{
+    margin-top: 100px;
+    width:100%;
+    height:100%;
+}
+section{
+    /*border: solid white 2px;*/
+    /*background-color: var(--ccds);*/
+    /*width: 100%;*/
+    height: 600px;
+}
+footer{
+    background-color: var(--ccfooter);
+    width: 100%;
+    height: 200px;
+}
+h1{
+    font-size:60px;
+}
+button{
+    height:fit-content;
+    width: fit-content;
+    font-size: 20px;
+    margin-left:15px;
+    font-family:'Gill Sans MT';
+    padding: 15px;
+    background-color: var(--ccr);
+    color: var(--ccs);
+    border: none;
+    border-radius: 20px;
+}
+button:hover{
+    background-color: var(--ccbr);
+    color: var(--ccs);
+    transform: scale(1.02);
+}
+button:active{
+    background-color: var(--ccdds);
+    color: var(--ccw);
+}
+
+/*nav code*/
+header{
+    background-color: var(--ccheader);
+    display:flex;
+    flex-direction: row;
+    width: inherit;
+    height: 100px;
+    position:fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    border: 2px solid rgba(255, 255, 255, 0);
+    z-index: 1;
+    box-shadow: 0px 3px 20px var(--ccbl);
+}
+#logo{
+    border: 2px solid var(--cchtext);
+    height:60px;
+    width:60px;
+}
+#titlebox{
+    margin: 20px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 40px;
+}
+#titlebox p{
+color: var(--cchtext);
+}
+nav{
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    align-items: center;
+}
+#nav_button{
+    height:100%;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    color: var(--cchbutton_text);
+    margin-right: 8px;
+    font-size: 20px;
+    font-family:'Gill Sans MT';
+    /*background-color: var(--ccds);*/
+    /*border: 5px solid var(--ccr);*/
+    border-radius: 15px;
+}
+#nav_button:hover{
+    background-color: var(--ccbutton_hover);
+    color: var(--cchbutton_text);
+}
+#nav_button:active{
+    background-color: var(--cchbutton_text);
+    color: var(--ccheader);
+}
+
+/*homepage*/
+.hp_featured{
+    background-image: url(pictures/MTT_1359.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end
+}
+.hpf_infopanel{
+    width:50%;
+    height: 100%;
+    background-color: var(--ccw);
+    clip-path: polygon(32% 0, 100% 0%, 100% 100%, 0% 100%);
+    align-content: center;
+}
+.hpf_info{
+    display: flex;
+    flex-direction: column;
+    margin-left:30%;
+    margin-right:5%;
+    width:stretch;
+    height:70%;
+    justify-content: space-between;
+}
+.hpf_info .button_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: fit-content;
+    width: stretch;
+}
+.hp_about{
+    background-color: var(--ccds);
+    padding: 15px;
+    min-height: 600px;
+    height:fit-content;
+}
+.hpa_info{
+    display: flex;
+    flex-direction: row;
+    margin-right: 5%;
+    margin-left:5%;
+    margin-bottom:5%;
+    height: 70%;
+}
+.hpa_info_photo{
+background-image: url(pictures/small_thumb@3x.jpg);
+background-size:cover;
+width:60%;
+margin: 20px;
+}
+.hpa_info_textbox{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    margin: 20px;
+}
+
+/*prevshows page*/
+.show_display{
+    position:absolute;
+    display:none;
+}
+.show_display#overlay{
+    background-color: #0707076a;
+    width: 100%;
+    height: 100%;
+    top:0px;
+    left:0px;
+    position:fixed;
+    z-index: 2;
+    justify-content: center;
+}
+.show_display#content{
+    border: solid white 2px;
+    width: max-content;
+    height:max-content;
+    max-height: 80%;
+    max-width: 80%;
+    margin-top: 2%;
+    margin-bottom:2%;
+    margin-left:6%;
+    margin-right:6%;
+    z-index: 3;
+}
+.prevshows_display{
+    display: flex;
+    background-color: var(--ccs);
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+    width:inherit;
+    height: 480px;
+}
+.prevshows_display_header{
+    /*border: solid var(--ccp) 5px;
+    border-style: double;*/
+    height: stretch;
+    width: 100%;
+    margin: 20px;
+}
+
+.photogrid{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.2em;
+    padding: 0;
+    list-style-type: none;
+}
+.photogrid li{
+    flex-grow: 1;
+    height: 45vh;
+    margin: 0.2em;
+    width: fit-content;
+}
+
+.photogrid img{
+     width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 150ms ease-in-out;
+}
+.photogrid img:hover{
+transform: scale(1.04);
+margin: 2px;
+}
+
+.poster_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 0fr));
+    gap: 56px 36px;
+    justify-content: center;
+    width: 100%;
+}
+.prevshow_poster{
+    /*border: solid white 2px;*/
+    width:240px; 
+    height:350px;
+    overflow: hidden;
+}
+.card_wrapper{
+    position: relative; 
+    box-sizing: border-box;
+    overflow:hidden;
+    border-radius: 10px;
+    transition: 150ms ease-in-out;
+    cursor: pointer; 
+}
+.card_textbox{
+    height: 100%; 
+    width: inherit; 
+    background-color: var(--ccw);
+}
+.style_wrapper{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.card_wrapper:hover{
+transform: scale(1.04);
+}
+
+/*volunteer page*/
+.volunteer_wrapper{
+    display:flex;
+    justify-content:flex-end;
+    align-items: center;
+    height:fit-content;
+    width:100%;
+    background-image: url(https://t3.ftcdn.net/jpg/02/54/37/70/360_F_254377074_lsDHDGuNjsd7K5WVj5NfIU6yYxKdKalw.jpg);
+    background-size: cover;
+   /* border: solid white 2px;*/
+    
+}
+.application_form{
+    width:700px;
+    height:450px;
+    /*border: solid white 2px;*/
+    background-color: var(--ccw);
+    border-radius: 10px;
+    margin:60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.application_form .button_container{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    margin: 10%;
+}
+
+.contact_wrapper{
+display: flex;
+flex-direction: column;
+height: 100%;
+/*width: 100%*/
+}
+.contact_photo{
+    border: solid white 2px;
+    height: 40px;
+    width:40px;
+}
+.contact_name{
+    width:100%;
+    height: 50px;
+}
+
+/*contact*/
+.contacts_table{
+    width: 100%;
+    height: 500px;
+    /*border: solid white 2px; */
+    border-spacing: 20px;
+}
+.contacts_td{
+background-color: var(--ccw);
+border-radius: 10px;
+padding: 20px;
+align-content: flex-start;
+}
+.contacts_td_wrapper{
+display: flex;
+flex-direction: row;
+/*border: solid white 2px;*/
+height: fit-content;
+}
+.contacts_td_photo{
+width: 200px;
+height: 170px;
+border: solid black 2px;
+}
+.contacts_information{
+display: flex;
+flex-direction: column;
+height: fit-content;
+/*border: solid white 2px;*/
+}
+.contact_title{
+margin-bottom: 0px;
+margin-top: 10px;
+font-size: 24px;
+}
